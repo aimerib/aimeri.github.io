@@ -1344,7 +1344,7 @@
 		-webkit-flex-direction: column;
 		-ms-flex-direction: column;
 		flex-direction: column;
-		padding: 8em 0 6em 0;
+		padding: 6em 0 4em 0;
 		background-image: url("../../images/pagebanner.png");
 		background-size: cover;
 		background-repeat: no-repeat;
@@ -1353,6 +1353,7 @@
 		text-align: center;
 		position: relative;
 		cursor: default;
+		flex: 1;
 	}
 
 		#header input, #header select, #header textarea {
