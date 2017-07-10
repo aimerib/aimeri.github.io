@@ -421,9 +421,10 @@
 	input[type="button"],
 	button,
 	.button {
-		background-color: transparent;
-		box-shadow: inset 0 0 0 2px #666666;
-		color: #444444 !important;
+		background-color: #EF6480;
+		box-shadow: inset 0 0 0 2px #ffffff;
+		color: #ffffff !important;
+
 	}
 
 		input[type="submit"]:hover,
@@ -432,6 +433,7 @@
 		button:hover,
 		.button:hover {
 			color: #EF6480 !important;
+			background-color: transparent;
 			box-shadow: inset 0 0 0 2px #EF6480;
 		}
 
@@ -440,7 +442,8 @@
 		input[type="button"]:active,
 		button:active,
 		.button:active {
-			background-color: rgba(239, 100, 128, 0.15);
+			background-color: #EF6480
+			color: #ffffff;
 		}
 
 		input[type="submit"].icon:before,
@@ -1284,19 +1287,25 @@
 			}
 
 	}
-	
+
 
 /* Wrapper */
 
 	#wrapper {
 		width: 64em;
 		margin: 0 auto;
-		max-width: calc(100% - 4em);
-		padding: 4em 0 2em 0;
+		max-width: calc(75% - 4em);
+		padding: 6em 0 6em 0;
+
+	}
+	#wrapperoutter {
+		padding: 0 400px 0 400px;
+
 	}
 
+
 		#wrapper > .main {
-			margin-bottom: 4em;
+			margin-bottom: 2-em;
 		}
 
 		@media screen and (max-width: 980px) {
@@ -1346,7 +1355,7 @@
 		-ms-flex-direction: column;
 		flex-direction: column;
 		padding: 6em 0 4em 0;
-		background-image: url("../../images/pagebanner.png");
+		background-image: url("../../images/slothbanner.png");
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: top;
@@ -1414,7 +1423,7 @@
 		#header.alt {
 			height: 15em;
 			min-height: 15em;
-			min-height: 35vh;
+			min-height: 45vh;
 		}
 
 			#header.alt:before {
