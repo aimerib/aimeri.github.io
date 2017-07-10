@@ -1,0 +1,56 @@
+@font-face {
+  font-family: 'SlothHead';
+  src:  url('../fonts/SlothHead.eot?l1gocy');
+  src:  url('../fonts/SlothHead.eot?l1gocy#iefix') format('embedded-opentype'),
+    url('../fonts/SlothHead.ttf?l1gocy') format('truetype'),
+    url('../fonts/SlothHead.woff?l1gocy') format('woff'),
+    url('../fonts/SlothHead.svg?l1gocy#SlothHead') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="sc-"], [class*=" sc-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'SlothHead' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.sc-clicked:before {
+  content: "\e900";
+}
+.sc-lefttop:before {
+  content: "\e901";
+}
+.sc-top:before {
+  content: "\e902";
+}
+.sc-righttop:before {
+  content: "\e903";
+}
+.sc-right:before {
+  content: "\e904";
+}
+.sc-rightbottom:before {
+  content: "\e905";
+}
+.sc-bottom:before {
+  content: "\e906";
+}
+.sc-leftbottom:before {
+  content: "\e907";
+}
+.sc-left:before {
+  content: "\e908";
+}
+.sc-normal:before {
+  content: "\e909";
+}
