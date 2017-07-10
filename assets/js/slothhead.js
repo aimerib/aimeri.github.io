@@ -11,10 +11,10 @@ $(window).load(init);
 function init(){
     mouseX = 0;
     mouseY = 0;
-    imageTop = $("#sloth").before().offset().top;
-    imageBottom = imageTop + $("#sloth").before().height();
-    imageLeft = $("#sloth").before().offset().left;
-    imageRight = imageLeft + $("#sloth").before().width();
+    imageTop = $("#sloth").offset().top;
+    imageBottom = imageTop + $("#sloth").height();
+    imageLeft = $("#sloth").offset().left;
+    imageRight = imageLeft + $("#sloth").width();
 }
 
 /* javascript */
