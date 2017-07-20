@@ -3,3 +3,5 @@ https://www.freecodecamp.org
 
 jade
 sass
+https://coolors.co
+thenounproject.com
