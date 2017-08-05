@@ -198,7 +198,7 @@ whenever.translations = {
   'ready': 'ready',
   'submitted':'submit',
   'changed': 'change',
-  'tapped': 'tap'
+  'tapped': 'tap' 
 };
 
 whenever.unbind_function_to_event = function (selector, event, action) {
