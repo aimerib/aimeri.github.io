@@ -1422,10 +1422,7 @@
 		}
 
 		#header.alt {
-			height: 30vh;
-			min-height: 15em;
-			min-height: 45vh;
-
+			height: 45vh;
 		}
 
 			#header.alt:before {
