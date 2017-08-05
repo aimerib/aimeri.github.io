@@ -28,7 +28,7 @@
 }
 
 .content {
-  margin-top: calc(0% - 150px);
+  margin-top: calc(0% - 25vh);
   width: 100%;
   height: calc(100% - 50vh);
   display: flex;
@@ -52,5 +52,5 @@
   border-width: .2em;
   border-style: solid;
 
-  
+
 }
