@@ -1,16 +1,22 @@
-.wrapper{
-	width: 60vw;
-	height: 60vw;
-	position: relative;
+body {
+	margin: 0;
+	display: flex;
 }
+
+.wrapper{
+	width: 40vw;
+	height: 40vw;
+	position: relative;
+	margin: auto;
+}
+
 .container {
 	background: lavender;
 	width: 100%;
 	height: 100%;
 	margin: 20px;
-
-
 }
+
 .front {
 	position: absolute;
 	top: 0px;
@@ -22,24 +28,28 @@
 	justify-content: center;
 	align-items: center;
 	z-index: 1;
-
-
 }
 
-.images:hover{
-	filter:opacity(30%) blur(5px);
 
-}
 
 .images {
 	position: absolute;
 	opacity: 0.6;
-	height: 104%;
-	width: 104%; 
+	height: 100%;
+	width: 100%;
 	object-fit: cover;
+	object-position: center;
 	z-index: 2;
 	border-radius: 100%;
+	border-width: 0;
 	transition: .5s ease;
+}
+
+
+
+.images:hover{
+	filter:opacity(30%) blur(5px);
+
 }
 
 .back:hover  .images {
