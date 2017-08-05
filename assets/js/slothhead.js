@@ -1,3 +1,5 @@
+//code stoped working with fluid layout. Will have to troubleshoot at later time, if even using sloth animation
+
 $(window).mousemove(getMousePosition);
 var mouseX;
 var mouseY;

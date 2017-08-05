@@ -1293,10 +1293,9 @@
 /* Wrapper */
 
 	#wrapper {
-		width: 64em;
+		width: 75vw;
 		margin: 0 auto;
-		max-width: calc(75% - 4em);
-		padding: 6em 0 6em 0;
+		padding: 6vh 0 6vh 0;
 
 	}
 	#wrapperoutter {
@@ -1308,7 +1307,7 @@
 		#wrapper > .main {
 			margin-bottom: 2-em;
 		}
-
+/*
 		@media screen and (max-width: 980px) {
 
 			#wrapper {
@@ -1333,11 +1332,10 @@
 				}
 
 		}
-
+*/
 /* Header */
 
 	#header {
-		background-color: #444;
 		color: rgba(255, 255, 255, 1);
 		display: -moz-flex;
 		display: -webkit-flex;
@@ -1355,17 +1353,18 @@
 		-webkit-flex-direction: column;
 		-ms-flex-direction: column;
 		flex-direction: column;
-		padding: 6em 0 4em 0;
-		background-image: url("../../images/banner.png");
-		background-size: cover;
+		padding: 6vh 0 1vh 0;
+		background-image: url("../../images/slothcrew.png");
+		background-size: 40vh;
 		background-repeat: no-repeat;
-		background-position: top;
-		background-attachment: fixed;
+		background-position: center;
+
 		text-align: center;
 		position: relative;
 		cursor: default;
 		flex: 1;
 		height: 45vh;
+
 	}
 
 		#header input, #header select, #header textarea {
