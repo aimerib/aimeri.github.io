@@ -1365,6 +1365,7 @@
 		position: relative;
 		cursor: default;
 		flex: 1;
+		height: 45vh;
 	}
 
 		#header input, #header select, #header textarea {
@@ -1420,11 +1421,11 @@
 			position: relative;
 			z-index: 1;
 		}
-
+/*
 		#header.alt {
 			height: 45vh;
 		}
-
+*/
 			#header.alt:before {
 				-moz-transition: background-color 3s ease;
 				-webkit-transition: background-color 3s ease;
