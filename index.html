@@ -63,10 +63,21 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script src="assets/js/whenever.js"></script>
+			<script src="assets/js/jquery.mobile.custom.min.js"></script>
 			<!-- <script src="assets/js/slothhead.js"></script> -->
 
 
 			<script type="text/javascript" charset="utf-8">
+
+			$(function(){
+			  $( "span.iconsloth" ).bind( "tap", tapHandler );
+
+			  function tapHandler( event ){
+			    $('div#slothhead').empty().append("<span id=sloth class='iconsloth sc-clicked major'></span>");
+					$('div#secretcode').empty().append("<p class='promo'>Congratulations! You just unlocked a promo code: FAM38fd1bf </p> <p class='promo'>You can use it in our store for a big discount! Just click on the button above and happy shopping :)</p>");
+			  }
+			});
+
 				whenever.definitions.add({
 					'the sloth head': 'span.iconsloth'
 				})
@@ -82,10 +93,7 @@
 					.is('clicked')
 					.then('add the post to the page')
 						.and('replace sloth head')
-				whenever('the sloth head')
-					.is('tapped')
-					.then('add the post to the page')
-						.and('replace sloth head')
+
 			</script>
 
 	</body>
