@@ -1,0 +1,196 @@
+<html>
+  <body bgcolor="#f1f1f1" style="background-color: f1f1f1;margin-top: 0;margin-left: 0;font-family: 'Open Sans', sans-serif;color: #8a8989;">
+    <!--[if mso]>
+<style type="text/css">
+body, table, td {font-family: Open Sans, sans-serif !important; color:#8a8989}
+</style>
+<![endif]-->
+    <br />
+    <br />
+    <br />
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" id="wrapTable">
+
+      <!-- Drop Shadow Top -->
+      <tr><td align="center" bgcolor="#f1f1f1">
+        <table cellpadding="0" cellspacing="0" border="0" width="600">
+          <tr>
+            <td width="600" bgcolor="#f1f1f1">
+              <img src="http://www.healthgram.com/images/ds_top.gif" alt="" title="" style="display: block;" />
+            </td>
+          </tr>
+        </table>
+      </td></tr>
+      <!-- Middle section inside Top and Bottom Drop Shadows -->
+      <tr><td align="center" bgcolor="#f1f1f1">
+        <table cellpadding="0" cellspacing="0" border="0" width="600">
+          <tr>
+            <!-- Drop Shadow Left -->
+            <td width="1" bgcolor="#eaeaea"><img src="http://www.healthgram.com/images/spacer-email.gif" alt="" title="" style="display: block;" /></td>
+            <td width="1" bgcolor="#dbdbdb"><img src="http://www.healthgram.com/images/spacer-email.gif" alt="" title="" style="display: block;" /></td>
+            <td width="1" bgcolor="#c7c7c7"><img src="http://www.healthgram.com/images/spacer-email.gif" alt="" title="" style="display: block;" /></td>
+            <td width="1" bgcolor="#aaaaaa"><img src="http://www.healthgram.com/images/spacer-email.gif" alt="" title="" style="display: block;" /></td>
+            <td width="1" bgcolor="#868686"><img src="http://www.healthgram.com/images/spacer-email.gif" alt="" title="" style="display: block;" /></td>
+            <!-- Main Content Table - Inside Drop Shadows -->
+            <td width="590" bgcolor="#ffffff">
+              <table cellpadding="0" cellspacing="0" border="0" width="590" id="contentTable" >
+                <tr>
+                  <td width="40">
+                  </td>
+                  <td>
+
+                    <!-- CONTENT GOES HERE -->
+                     <table align="center">
+                      <tr>
+                        <td>
+                          <img src="http://www.healthgram.com/images/spacer-email.gif" width="1" height="20" alt="" title="" style="display: block;" />
+
+                        </td>
+                      </tr>
+                    </table>
+                    <img src="http://www.healthgram.com/images/spacer-email-40.gif" width="1" height="40" alt="is this working?" title="" style="display: block; height:40px" />
+                    <img src="http://www.healthgram.com/images/Healthgram_logo_email.png" width="280" height="75" alt="" title="" style="display: block;" />
+                    <img src="http://www.healthgram.com/images/spacer-email-40.gif" width="1" height="40" alt="" title="" style="display: block;" />
+                    {%if event == 'ticket-opened'%}
+                      <p class="title" style="font-weight: bold;font-size: 14px;">A new IT Helpdesk ticket has been opened.</p>
+                      <br>
+                      <br>
+                      <p><span style="color:#319db6;">{{ticket.creator.full_name_or_email}}</span> wrote: <br>
+                      <span class="subtitle" style="font-weight: bold;font-size: 12px;">{{ticket.last_comment.body | escape | simple_format}}</span></p>
+                      {% if recipient.is_admin %}
+                        <div id="ticketOverview" style="padding: 8px;border: 1px solid #CCCCCC;background-color: #EFEFEF;font-size: 11px; width:500px;">
+                          <h2 id="adminTicket" style="margin-bottom: 5px;margin-top: 0px;font-size: 11px;">Ticket Overview</h2>
+                          Creator: <span style="color:#319db6;">{{ticket.creator.full_name_or_email | escape}}</span><br>
+                          Assignee: <span style="color:#319db6;">{{ticket.assignee.full_name_or_email | escape}}</span><br>
+                          Ticket URL: <a href="{{ticket.url | escape}}" style="color: #319db6;">{{ticket.url | escape}}</a><br>
+                          <br>
+                        </div>
+                      {% endif %}
+                    {%endif%}
+
+
+                      {% case event %}
+                        {%when 'ticket-comment'%}
+                            <p><span style="color:#319db6;">{{ticket.last_comment.creator.full_name_or_email}}</span> wrote: <br>
+                            <span class="title" style="font-weight: bold;font-size: 14px;">{{ticket.last_comment.body | escape | simple_format}}</span></p>
+                            <p class="subtitle" style="font-weight: bold;font-size: 12px;">To provide more information or answer a question about this ticket, please click on the following link:
+                            <br>
+                            <a href="{{ticket.portal_url | escape}}" style="color: #319db6;">{{ticket.portal_url | escape}}</a><br></p>
+
+                            {% if recipient.is_admin %}
+                              <div id="ticketOverview" style="padding: 8px;border: 1px solid #CCCCCC;background-color: #EFEFEF;font-size: 11px; width:500px;">
+                                <h2 id="adminTicket" style="margin-bottom: 5px;margin-top: 0px;font-size: 11px;">Ticket Overview</h2>
+                                Creator: <span style="color:#319db6;">{{ticket.creator.full_name_or_email | escape}}</span><br>
+                                Assignee: <span style="color:#319db6;">{{ticket.assignee.full_name_or_email | escape}}</span><br>
+                                Ticket URL: <a href="{{ticket.url | escape}}" style="color: #319db6;">{{ticket.url | escape}}</a><br>
+                                <br>
+                              </div>
+                            {% endif %}
+
+                              {% if message %}
+                                <p>{{message}}</p>
+                              {% endif %}
+                        {% when 'ticket-assigned' %}
+                          <br />
+                          {% if message %}
+                          <p class="title" style="font-weight: bold;font-size: 14px;">{{message}}</p>
+                          {% endif %}
+                          {% if recipient.is_admin %}
+                            <div id="ticketOverview" style="padding: 8px;border: 1px solid #CCCCCC;background-color: #EFEFEF;font-size: 11px; width:500px;">
+                              <h2 id="adminTicket" style="margin-bottom: 5px;margin-top: 0px;font-size: 11px;">Ticket Overview</h2>
+                              Creator: <span style="color:#319db6;">{{ticket.creator.full_name_or_email | escape}}</span><br>
+                              Assignee: <span style="color:#319db6;">{{ticket.assignee.full_name_or_email | escape}}</span><br>
+                              Ticket URL: <a href="{{ticket.url | escape}}" style="color: #319db6;">{{ticket.url | escape}}</a><br>
+                              <br>
+                            </div>
+                          {% endif %}
+                        {% when 'ticket-closed' %}
+                          {%if ticket.assignee == null%}
+                            <p><span style="color:#319db6;">{{ticket.last_comment.creator.full_name_or_email}}</span> wrote: <br>
+                            <span class="title" style="font-weight: bold;font-size: 14px;">{{ticket.last_comment.body | escape | simple_format}}</span></p>
+                            <p class="subtitle" style="font-weight: bold;font-size: 12px;">To review your ticket notes or re-open it, please click on the following link:
+                            <br>
+                            <a href="{{ticket.portal_url | escape}}" style="color: #319db6;">{{ticket.portal_url | escape}}</a><br></p>
+                          {% else %}
+                            <p><span style="color:#319db6;">{{ticket.assignee.full_name_or_email}}</span> wrote: <br>
+                            <span class="title" style="font-weight: bold;font-size: 14px;">{{ticket.last_comment.body | escape | simple_format}}</span></p>
+                            <p class="subtitle" style="font-weight: bold;font-size: 12px;">To review your ticket notes or re-open it, please click on the following link:
+                            <br>
+                            <a href="{{ticket.portal_url | escape}}" style="color: #319db6;">{{ticket.portal_url | escape}}</a><br></p>
+                          {% endif %}
+                          {% if recipient.is_admin %}
+                            <div id="ticketOverview" style="padding: 8px;border: 1px solid #CCCCCC;background-color: #EFEFEF;font-size: 11px; width:500px;">
+                              <h2 id="adminTicket" style="margin-bottom: 5px;margin-top: 0px;font-size: 11px;">Ticket Overview</h2>
+                              Creator: <span style="color:#319db6;">{{ticket.creator.full_name_or_email | escape}}</span><br>
+                              Assignee: <span style="color:#319db6;">{{ticket.assignee.full_name_or_email | escape}}</span><br>
+                              Ticket URL: <a href="{{ticket.url | escape}}" style="color: #319db6;">{{ticket.url | escape}}</a><br>
+                              <br>
+                            </div>
+                          {% endif %}
+
+                          {% if message %}
+                          <p>{{message}}</p>
+                          {% endif %}
+                      	{%endcase%}
+
+                    <br>
+
+                    <!-- Inform user that their ticket was closed for being a duplicate of another ticket -->
+                    {% if events contains 'ticket-closed-dup' %}
+                      <p>This ticket was closed as a duplicate of <a href="{% if recipient.is_admin %}{{ticket.master_ticket_url | escape}}{% else %}{{ticket.master_ticket_portal_url | escape}}{% endif %}" style="color: #319db6;">ticket #{{ticket.master_ticket}}</a>.<br>
+                      Please refer to that ticket for further comments and updates.</p>
+                    {% endif %}
+
+                    <!-- ADMIN USER EMAIL LOGIC -->
+                    <!-- Checks if user is admin. If so, generate Ticket overview box. -->
+
+
+                    <!-- Checks if ticket is open, and if ticket has comments. If so, loop through the ticket history and print it on the email, otherwise suppress ticket history -->
+                    {% if ticket.status == 'open' %}
+                      {% if ticket.previous_comments != empty %}
+                        <br>
+                        <h2 id="history" style="margin-bottom: 5px;margin-top: 10px;font-size: 12px;">Ticket History</h2>
+                      {%endif%}
+                      {% for comment in ticket.previous_comments %}
+                        <i id="info" style="color: #555555;font-size: 11px;">On {{comment.created_at | date_sw}}, {{comment.creator.full_name_or_email | escape}} wrote:</i>
+                        {{comment.body | escape | simple_format}}
+                      {% endfor %}
+                    {% endif %}
+                    <br />
+                    <table align="center" border="0">
+                      <tr>
+                        <td>
+                          <img src="http://www.healthgram.com/images/spacer-email-40.gif" width="1" height="40" alt="" title="" style="display: block;" />
+                          <p>Thank you for contacting the IT Department</p>
+						  <img src="http://www.healthgram.com/images/spacer-email-20.gif" width="1" height="20" alt="" title="" style="display: block;" />
+                        </td>
+                      </tr>
+                    </table>
+
+                  </td>
+                  <td width="40">
+                  </td>
+                </tr>
+              </table><!-- END Main Content Table - Inside Drop Shadow -->
+            </td>
+            <!-- Drop Shadow Right -->
+            <td width="1" bgcolor="#868686"><img src="http://www.healthgram.com/images/spacer-email.gif" alt="" title="" style="display: block;" /></td>
+            <td width="1" bgcolor="#aaaaaa"><img src="http://www.healthgram.com/images/spacer-email.gif" alt="" title="" style="display: block;" /></td>
+            <td width="1" bgcolor="#c7c7c7"><img src="http://www.healthgram.com/images/spacer-email.gif" alt="" title="" style="display: block;" /></td>
+            <td width="1" bgcolor="#dbdbdb"><img src="http://www.healthgram.com/images/spacer-email.gif" alt="" title="" style="display: block;" /></td>
+            <td width="1" bgcolor="#eaeaea"><img src="http://www.healthgram.com/images/spacer-email.gif" alt="" title="" style="display: block;" /></td>
+          </tr>
+        </table>
+      </td></tr>
+      <!-- Drop Shadow Bottom -->
+      <tr><td align="center" bgcolor="#f1f1f1">
+        <table cellpadding="0" cellspacing="0" border="0" width="600">
+          <tr>
+            <td width="600" bgcolor="#f1f1f1" align="center" valign="top"  height="10" style="line-height:5px;">
+              <img src="http://www.healthgram.com/images/ds_bottom.gif" alt="" title=""  style="display: block;"/>
+            </td>
+          </tr>
+        </table>
+      </td></tr>
+    </table> <!-- #wrapTable -->
+  </body>
+</html>
