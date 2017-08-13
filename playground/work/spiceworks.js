@@ -1,0 +1,1 @@
+var spiceworksRequest = new XMLHttpRequest();
