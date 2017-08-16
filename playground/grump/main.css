@@ -20,7 +20,13 @@ body {
   height: 100%;
   display: grid;
   grid-template-columns: [page-start] 1fr [content-start] 80vw [content-end] 1fr [page-end];
-  grid-template-rows: [page-top] 1fr [content-top] 80vh [content-bottom] 1fr [page-bottom];
+  grid-template-rows: [page-top] 1fr [divider] 20px [content-top] 80vh [content-bottom] 1fr [page-bottom];
+}
+
+.banner {
+  grid-row: page-top / divider;
+  grid-column: page-start / page-end;
+  background-color: white;
 }
 
 .grumplogo {
@@ -179,13 +185,12 @@ justify-content: center;
 }
 
 .content-wrapper {
-  display: grid;
+  display: flex;
+  flex-direction: column;
 }
 .content-display {
   width: 100%;
   position: relative;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-
   margin-top: 10px;
   opacity: 0.7;
 
