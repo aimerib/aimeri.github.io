@@ -13,9 +13,11 @@ var screams = ["You really clicked me!",
 
 document.getElementById('myButton').addEventListener("click", function() {
   document.body.style.backgroundColor = "black";
+  document.getElementsByClassName('main')[0].style.backgroundColor = "black";
   this.style.backgroundColor = "red";
   this.style.color = "white";
   this.style.fontFamily = "Frijole"
+  document.title = "Stranger Danger!!!!";
   if(i <= 9 ){
     this.innerHTML = screams[i];
 
