@@ -1,0 +1,105 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+}
+
+.header p {
+  font-size: 40px;
+  padding: 0;
+}
+
+.main {
+  width: 90%;
+  height: 90%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  margin: 0 auto;
+  grid-gap: 30px;
+
+}
+
+.top-left {
+  grid-column: 1/2;
+  grid-row: 1/2;
+
+}
+
+.top-middle {
+  grid-column: 2/3;
+  grid-row: 1/2;
+
+}
+
+.top-right {
+  grid-column: 3/4;
+  grid-row: 1/2;
+
+}
+
+.middle-left {
+  grid-column: 1/2;
+  grid-row: 2/3;
+
+}
+
+.middle-middle {
+  grid-column: 2/3;
+  grid-row: 2/3;
+
+}
+
+.middle-right {
+  grid-column: 3/4;
+  grid-row: 2/3;
+
+}
+
+.bottom-left {
+  grid-column: 3/4;
+  grid-row: 1/2;
+
+}
+
+.bottom-middle {
+  grid-column: 3/4;
+  grid-row: 2/3;
+
+}
+
+.bottom-right {
+  grid-column: 3/4;
+  grid-row: 3/4;
+
+}
+
+
+.wrapper {
+  background-color: lavender;
+  cursor: pointer;
+}
+
+.circle {
+  background-image: url('./images/o.png');
+  background-size: 30%;
+  background-position: center;
+  background-repeat: no-repeat;
+
+
+}
+
+.x {
+  background-image: url('./images/x.png');
+  background-size: 30%;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
