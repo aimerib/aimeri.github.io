@@ -7,9 +7,11 @@ document.addEventListener("DOMContentLoaded", function() {
   buttons[1].addEventListener("click", function () {
     var contentWindow = document.getElementsByClassName('window-main')[0];
     var mainWindow = document.getElementsByClassName('window')[0];
+    var bannerSize = document.getElementsByClassName('banner')[0].style.height
+    var bottomOfWindow = window.innerHeight
     contentWindow.style.display = 'none';
     mainWindow.style.width = '30%'
-    mainWindow.style.top = '600px'
+    mainWindow.style.bottom = window.innerHeight / -1.35
   });
   buttons[2].addEventListener("click", function () {
     var contentWindow = document.getElementsByClassName('window-main')[0];
