@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var mainWindow = document.getElementsByClassName('window')[0];
     var banner = document.getElementsByClassName('banner')[0];
     var wrapper = document.getElementsByClassName('wrapper')[0];
+    if (contentWindow.style.display === 'none'){contentWindow.style.display = ''}
     banner.style.display = 'none';
     mainWindow.style.width = window.innerWidth;
     mainWindow.style.position = 'absolute';
