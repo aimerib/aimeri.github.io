@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var bottomOfWindow = window.innerHeight
     contentWindow.style.display = 'none';
     mainWindow.style.width = '30%'
-    mainWindow.style.bottom = window.innerHeight / -1.35
+    mainWindow.style.top = window.innerHeight - 250
   });
   buttons[2].addEventListener("click", function () {
     var contentWindow = document.getElementsByClassName('window-main')[0];
