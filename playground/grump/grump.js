@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (mainWindow.style.display === 'none'){
       mainWindow.style.display = '';
       speechBubble.innerHTML = "<p>There you go, it's back again :)</p>"
+      
     }
 
   });
