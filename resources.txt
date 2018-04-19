@@ -2,23 +2,11 @@ https://cloudinary.com/
 
 https://www.codecademy.com
 https://www.freecodecamp.org
-
-jade
-sass
 https://coolors.co
 thenounproject.com
 Sketch - Adobe XD
 
-https://www.youtube.com/watch?v=HCc55xgSvqM
-Testing pull
-
-
-https://www.khanacademy.org/computing/computer-programming
 http://jsforcats.com/
-https://channel9.msdn.com/Series/Javascript-Fundamentals-Development-for-Absolute-Beginners
 http://www.learn-js.org/
 https://bonsaiden.github.io/JavaScript-Garden/
 https://zeit.co/now#get-started
-
-
-https://www.digitalocean.com/community/tutorials/how-to-secure-apache-with-let-s-encrypt-on-ubuntu-16-04
